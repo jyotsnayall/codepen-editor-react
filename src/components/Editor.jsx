@@ -28,16 +28,16 @@ function Editor() {
             </div>
 
             <div className='input-cover'>
-                <div className='editor-title'>HTML
-                
-                <textarea value={html} type='text' placeholder='HTML' onChange={(e) => setHtml(e.target.value)} />
-                </div>
-                <textarea value={css} type='text' placeholder='CSS' onChange={(e) => setCss(e.target.value)} />
-                <textarea value={js} type='text' placeholder='JavaScript' onChange={(e) => setJs(e.target.value)} />
+                <textarea value={html} type='text' placeholder='HTML' className='input' onChange={(e) => setHtml(e.target.value)} />
+                <div className='width'/>
+                <textarea value={css} type='text' placeholder='CSS' className='input' onChange={(e) => setCss(e.target.value)} />
+                <div className='width'/>
+                <textarea value={js} type='text' placeholder='JavaScript' className='input' onChange={(e) => setJs(e.target.value)} />
+                <div className='width'/>
             </div>
 
             <div className='output'>
-                <iframe 
+                <iframe
                     srcDoc={srcCode}
                     title='output'
                     sandbox='allow-scripts'
