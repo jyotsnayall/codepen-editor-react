@@ -44,15 +44,14 @@ img {
 .input-cover {
   background-color: #000;
   display: flex;
-  height: 48vh;  
+  height: 48vh;
   padding: 3rem 1.5rem 1.5rem 1.5rem;
 }
 
 
 .editor-title {
   display: flex;
-  flex-direction: column;
-  /* align-items: center; */
+  justify-content: space-between;
   background-color: hsl(225, 6%, 13%);
   color: white;
   padding: .5rem .5rem .5rem 1rem;
@@ -63,11 +62,33 @@ img {
 .editor-cover {
   /* background-color: #565658; */
   display: flex;
+  flex-grow: 1;
+  flex-basis: 0;
   flex-direction: column;
   /* height: 48vh; */
-  width: 100%;
+  /* width: 100%; */
   border-radius: .5rem;
   padding: 1rem;
+}
+
+.editor-cover.html-collapsed {
+  flex-grow: 0;
+}
+
+.editor-cover.css-collapsed {
+  flex-grow: 0;
+}
+
+.editor-cover.js-collapsed {
+  flex-grow: 0;
+}
+
+.expand-collapse-btn {
+  margin-left: .5rem;
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
 }
 
 .input {
