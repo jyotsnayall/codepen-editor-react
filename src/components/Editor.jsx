@@ -25,16 +25,27 @@ function Editor() {
     return (
         <div className='wrapper'>
             <div className='header'>
-                <span>Live Editor</span>
+                <span>Live Code Editor</span>
             </div>
 
             <div className='input-cover'>
-                <textarea value={html} type='text' placeholder='HTML' className='input' onChange={(e) => setHtml(e.target.value)} />
-                <div className='width'/>
-                <textarea value={css} type='text' placeholder='CSS' className='input' onChange={(e) => setCss(e.target.value)} />
-                <div className='width'/>
-                <textarea value={js} type='text' placeholder='JavaScript' className='input' onChange={(e) => setJs(e.target.value)} />
-                <div className='width'/>
+                <div className='editor-cover'>
+                    <span className='editor-title'>HTML</span>
+                    <textarea value={html} type='text' placeholder='HTML' className='input' onChange={(e) => setHtml(e.target.value)} />
+                </div>
+                
+                <div className='width' />
+                <div className='editor-cover'>
+                    <span className='editor-title'>CSS</span>
+                    <textarea value={css} type='text' placeholder='CSS' className='input' onChange={(e) => setCss(e.target.value)} />
+                </div>
+                
+                <div className='width' />
+                <div className='editor-cover'>
+                    <span className='editor-title'>JavaScript</span>
+                    <textarea value={js} type='text' placeholder='JavaScript' className='input' onChange={(e) => setJs(e.target.value)} />
+                </div>
+                <div className='width' />
             </div>
 
             <div className='output'>
